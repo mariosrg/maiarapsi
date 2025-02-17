@@ -11,14 +11,31 @@
             padding: 0;
             background: linear-gradient(to right, #001F4D, #D4AF37);
             color: white;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
+            display: flex;
+            max-width: 800px;
             background: #001F4D;
             border-radius: 10px;
+            overflow: hidden;
+        }
+        .left, .right {
+            padding: 20px;
+        }
+        .left {
+            width: 60%;
+        }
+        .right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #D4AF37;
         }
         .profile-img {
             width: 150px;
@@ -42,41 +59,52 @@
         }
         .icons {
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
         .icons a {
-            color: #D4AF37;
+            color: #001F4D;
             text-decoration: none;
             font-size: 24px;
-            border: 2px solid #D4AF37;
-            padding: 10px;
+            background: white;
+            padding: 15px;
             border-radius: 50%;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="profile.jpg" alt="Maiara Martins" class="profile-img">
-        <h1>Maiara Martins</h1>
-        <p class="info">Psicóloga | CRP 11/22919</p>
+        <div class="left">
+            <img src="profile.jpg" alt="Maiara Martins" class="profile-img">
+            <h1>Maiara Martins</h1>
+            <p class="info">Psicóloga | CRP 11/22919</p>
+            
+            <ul class="services">
+                <li>🔹 Transtorno do Espectro Autista (TEA)</li>
+                <li>🔹 Transtorno do Déficit de Atenção e Hiperatividade (TDAH)</li>
+                <li>🔹 Dificuldades de Aprendizagem</li>
+                <li>🔹 Orientação Vocacional e Profissional</li>
+                <li>🔹 Dificuldades nos Relacionamentos</li>
+                <li>🔹 Ansiedade e Transtornos Ansiosos</li>
+                <li>🔹 Depressão e Regulação Emocional</li>
+                <li>🔹 Distúrbios Alimentares</li>
+            </ul>
+        </div>
         
-        <ul class="services">
-            <li>🔹 Transtorno do Espectro Autista (TEA)</li>
-            <li>🔹 Transtorno do Déficit de Atenção e Hiperatividade (TDAH)</li>
-            <li>🔹 Dificuldades de Aprendizagem</li>
-            <li>🔹 Orientação Vocacional e Profissional</li>
-            <li>🔹 Dificuldades nos Relacionamentos</li>
-            <li>🔹 Ansiedade e Transtornos Ansiosos</li>
-            <li>🔹 Depressão e Regulação Emocional</li>
-            <li>🔹 Distúrbios Alimentares</li>
-        </ul>
-        
-        <div class="icons">
-            <a href="https://wa.me/seunumero" target="_blank">📱</a>
-            <a href="https://instagram.com/seuinstagram" target="_blank">📸</a>
-            <a href="mailto:seuemail@email.com" target="_blank">✉️</a>
-            <a href="https://maps.google.com/?q=sualocalizacao" target="_blank">📍</a>
+        <div class="right">
+            <div class="icons">
+                <a href="https://wa.me/seunumero" target="_blank">📱</a>
+                <a href="https://instagram.com/seuinstagram" target="_blank">📸</a>
+                <a href="mailto:seuemail@email.com" target="_blank">✉️</a>
+                <a href="https://maps.google.com/?q=sualocalizacao" target="_blank">📍</a>
+            </div>
         </div>
     </div>
 </body>
