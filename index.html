@@ -4,33 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maiara Martins - Psicóloga</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #001F4D, #D4AF37);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #001F4D;
+            border-radius: 10px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #D4AF37;
+        }
+        h1 {
+            color: #D4AF37;
+        }
+        .info {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .services {
+            text-align: left;
+            padding: 10px;
+        }
+        .services li {
+            margin: 10px 0;
+        }
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .icons a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 24px;
+            border: 2px solid #D4AF37;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <div class="container">
+        <img src="profile.jpg" alt="Maiara Martins" class="profile-img">
         <h1>Maiara Martins</h1>
-        <p>Psicóloga | CRP 11/22919</p>
-    </header>
-    <section>
-        <h2>Serviços</h2>
-        <ul>
-            <li>Transtorno do Espectro Autista (TEA)</li>
-            <li>Transtorno do Déficit de Atenção e Hiperatividade (TDAH)</li>
-            <li>Dificuldades de Aprendizagem</li>
-            <li>Orientação Vocacional e Profissional</li>
-            <li>Dificuldades nos Relacionamentos</li>
-            <li>Ansiedade e Transtornos Ansiosos</li>
-            <li>Depressão e Regulação Emocional</li>
-            <li>Distúrbios Alimentares</li>
+        <p class="info">Psicóloga | CRP 11/22919</p>
+        
+        <ul class="services">
+            <li>🔹 Transtorno do Espectro Autista (TEA)</li>
+            <li>🔹 Transtorno do Déficit de Atenção e Hiperatividade (TDAH)</li>
+            <li>🔹 Dificuldades de Aprendizagem</li>
+            <li>🔹 Orientação Vocacional e Profissional</li>
+            <li>🔹 Dificuldades nos Relacionamentos</li>
+            <li>🔹 Ansiedade e Transtornos Ansiosos</li>
+            <li>🔹 Depressão e Regulação Emocional</li>
+            <li>🔹 Distúrbios Alimentares</li>
         </ul>
-    </section>
-    <section>
-        <h2>Contato</h2>
-        <p>E-mail: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
-        <p>Instagram: <a href="https://instagram.com/seuinstagram">@seuinstagram</a></p>
-    </section>
-    <footer>
-        <p>Localização: [Inserir localização]</p>
-    </footer>
+        
+        <div class="icons">
+            <a href="https://wa.me/seunumero" target="_blank">📱</a>
+            <a href="https://instagram.com/seuinstagram" target="_blank">📸</a>
+            <a href="mailto:seuemail@email.com" target="_blank">✉️</a>
+            <a href="https://maps.google.com/?q=sualocalizacao" target="_blank">📍</a>
+        </div>
+    </div>
 </body>
 </html>
