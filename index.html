@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maiara Martins - Psicóloga</title>
     <style>
-	@font-face {
+	    @font-face {
 	font-family: 'Athena';
 	src: url('athena.TTF');
 	}
@@ -102,11 +102,36 @@
             display: flex;
             justify-content: center;
             align-items: center;
+			cursor: pointer;
         }
-	.social {
+		.social {
             font-size: 17px;
             margin-top: -10px;
 			color: #061d49;
+        }
+		.modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .close {
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -132,15 +157,31 @@
         <div class="right">
             <div class="icons">
                 <a href="https://api.whatsapp.com/send?phone=5588998022119&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os!" target="_blank"><img src="icons/iconw.png" alt="Whatsapp" height="50" width="50"></a>
-			<p class="social">Whatsapp</p>
+				<p class="social">Whatsapp</p>
                 <a href="https://www.instagram.com/maiaramartins.psi/" target="_blank"><img src="icons/iconi.png" alt="Instagram" height="50" width="50"></a>
-			<p class="social">Instagram</p>
+				<p class="social">Instagram</p>
                 <a href="mailto:maiaramartins.psi@gmail.com" target="_blank"><img src="icons/icone.png" alt="E-mail" height="50" width="50"></a>
-			<p class="social">E-mail</p>
-                <a href="https://maps.google.com/?q=sualocalizacao" target="_blank"><img src="icons/iconl.png" alt="Localização" height="50" width="50"></a>
-			<p class="social">Localização</p>
+				<p class="social">E-mail</p>
+                <a id="location-btn"><img src="icons/iconl.png" alt="Localização" height="50" width="50"></a>
+				<p class="social">Localização</p>
             </div>
         </div>
     </div>
+	<div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Endereço: Rua Exemplo, 123, Bairro Centro, Cidade - Estado</p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("location-btn").addEventListener("click", function() {
+            document.getElementById("modal").style.display = "flex";
+        });
+        
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
